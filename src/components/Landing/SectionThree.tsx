@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FeaturedPropertyItem from "./FeaturedPropertyItem";
+import Partners from "./Partners";
 
 const SectionThree = () => {
   return (
@@ -37,7 +38,7 @@ const SectionThree = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-10 max-w-max mx-auto mt-20">
-        {Array.from({ length: 6 }, (_, index) => (
+        {Array.from({ length: 9 }, (_, index) => (
           <Link
             to={`/property-details/${index}`}
             key={index}
@@ -69,6 +70,8 @@ const SectionThree = () => {
           </Link>
         ))}
       </div>
+
+      <Partners />
     </div>
   );
 };

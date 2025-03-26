@@ -4,6 +4,9 @@ import Landing from "./pages/Landing";
 import About from "./pages/About";
 import MainLayout from "./components/MainLayout";
 import PropertyDetails from "./pages/PropertyDetails";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +23,30 @@ function App() {
       element: (
         <MainLayout>
           <About />
+        </MainLayout>
+      ),
+    },
+    {
+      path: "/services",
+      element: (
+        <MainLayout>
+          <Services />
+        </MainLayout>
+      ),
+    },
+    {
+      path: "/projects",
+      element: (
+        <MainLayout>
+          <Projects />
+        </MainLayout>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <MainLayout>
+          <Contact />
         </MainLayout>
       ),
     },

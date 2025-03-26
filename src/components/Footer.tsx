@@ -84,9 +84,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-[80%] mx-auto border-t-2 border-white flex justify-center pt-16 mt-20">
-          <button className="border border-primaryGrey hover:bg-primaryPurple hover:text-primaryGrey py-3 px-8 bg-primaryGrey text-primaryPurple">
-            PROJECTS
-          </button>
+          <Link to={"/projects"}>
+            <button className="border border-primaryGrey hover:bg-primaryPurple hover:text-primaryGrey py-3 px-8 bg-primaryGrey text-primaryPurple">
+              PROJECTS
+            </button>
+          </Link>
         </div>
         <p className="text-xs mt-10">
           © {new Date().getFullYear()} By Brics Limited

@@ -1,4 +1,5 @@
 import React from "react";
+import { CiLocationOn } from "react-icons/ci";
 import { FaLinkedin, FaPhone } from "react-icons/fa6";
 import { IoLogoFacebook, IoMail } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -30,7 +31,13 @@ const Navbar = () => {
   return (
     <nav>
       <div className="bg-primaryGrey py-4 zr:hidden lg:flex">
-        <div className="w-full max-w-max mx-auto flex justify-end">
+        <div className="w-full max-w-max mx-auto flex justify-between">
+          <p className="flex gap-2 items-center">
+            <span>
+              <CiLocationOn />{" "}
+            </span>
+            <span>Victoria Island, Lagos, Nigeria</span>
+          </p>
           <div className="flex gap-12 items-center">
             <div className="flex text-primaryPurple text-2xl gap-8">
               <span>
