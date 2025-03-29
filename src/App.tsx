@@ -7,6 +7,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Team from "./pages/Team";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,14 @@ function App() {
       element: (
         <MainLayout>
           <About />
+        </MainLayout>
+      ),
+    },
+    {
+      path: "/team",
+      element: (
+        <MainLayout>
+          <Team />
         </MainLayout>
       ),
     },

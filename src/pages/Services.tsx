@@ -2,6 +2,7 @@ import React from "react";
 import AboutBanner from "../components/About/AboutBanner";
 import { services } from "../utils/data";
 import { GoDotFill } from "react-icons/go";
+import SlideIn from "../components/SlideIn";
 
 const Services = () => {
   return (
@@ -24,25 +25,49 @@ const Services = () => {
               />
             </div>
             <div className="w-full max-w-[50%] flex flex-col gap-10">
-              <h2 className="text-4xl font-semibold text-primaryPurple">
-                {item.heading}
-              </h2>
+              <SlideIn
+                duration={1200}
+                distance={70}
+                direction="left"
+                delay={150}
+              >
+                <h2 className="text-4xl font-semibold text-primaryPurple">
+                  {item.heading}
+                </h2>
+              </SlideIn>
               <div className="flex flex-col gap-5">
                 {item.text.map((textItem, index) => (
-                  <p key={index} className="text-lg">
-                    {textItem}
-                  </p>
+                  <SlideIn
+                    duration={1200}
+                    distance={70}
+                    direction="left"
+                    delay={index * 250}
+                  >
+                    <p key={index} className="text-lg">
+                      {textItem}
+                    </p>
+                  </SlideIn>
                 ))}
               </div>
               {item.list.length > 0 && (
                 <ul className="flex flex-col gap-3">
                   {item.list.map((listItem, index) => (
-                    <li key={index} className="flex gap-2 items-center text-lg">
-                      <span>
-                        <GoDotFill />
-                      </span>
-                      <span>{listItem}</span>
-                    </li>
+                    <SlideIn
+                      duration={1200}
+                      distance={70}
+                      direction="left"
+                      delay={index * 250}
+                    >
+                      <li
+                        key={index}
+                        className="flex gap-2 items-center text-lg"
+                      >
+                        <span>
+                          <GoDotFill />
+                        </span>
+                        <span>{listItem}</span>
+                      </li>
+                    </SlideIn>
                   ))}
                 </ul>
               )}

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { WhatsAppWidget } from "react-whatsapp-widget";
 
 const MainLayout = ({ children }) => {
   const { pathname } = window.location;
@@ -14,6 +15,7 @@ const MainLayout = ({ children }) => {
       <Navbar />
       {children}
       <Footer />
+      <WhatsAppWidget phoneNumber="XXXXXXXXXX" />
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SlideIn from "../SlideIn";
 
 const partnersOne = [
   "zenith.png",
@@ -23,7 +24,14 @@ const MarqueePartners = () => {
 
   return (
     <div className="w-full mt-40">
-      <h2 className="text-center mb-20 text-4xl font-semibold">WHO WE SERVE</h2>
+      <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
+        <h2 className="text-center mb-20 text-4xl font-semibold">
+          WHO WE{" "}
+          <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
+            SERVE
+          </span>
+        </h2>
+      </SlideIn>
       <div
         className={`wrapper ${
           isVertical ? "flex-row h-screen" : "flex flex-col"
