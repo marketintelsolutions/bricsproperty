@@ -53,21 +53,20 @@ const Footer = () => {
                   <IoLocationOutline size={30} />
                 </span>
                 <p className="text-sm">
-                  7, Femi Pearse, off Adeola Odeku Street, Victoria Island,
-                  Lagos, Nigeria
+                  8a, Elsie Femi Pearse Street, Victoria Island, Lagos, Nigeria
                 </p>
               </div>
               <div className="flex items-center gap-5">
                 <span>
                   <FaPhoneAlt size={30} />
                 </span>
-                <p className="text-sm">08030030000 | 070 700 7000</p>
+                <p className="text-sm">+234(0)7076622382 | +234(0)2012718630</p>
               </div>
               <div className="flex items-center gap-5">
                 <span>
                   <IoMail size={30} />
                 </span>
-                <p className="text-sm">info@brics.com</p>
+                <p className="text-sm">info@bricsinfrastructure.com</p>
               </div>
             </div>
           </div>

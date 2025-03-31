@@ -1,3 +1,5 @@
+import CinemaBg from "../CinemaBg";
+
 const AboutBanner: React.FC<{ heading: string; text: string }> = ({
   heading,
   text,
@@ -14,7 +16,8 @@ const AboutBanner: React.FC<{ heading: string; text: string }> = ({
         </p>
       </div>
       <div className="w-full">
-        <img src="/building.jpg" alt="building" className="h-full" />
+        {/* <img src="/building.jpg" alt="building" className="h-full" /> */}
+        <CinemaBg />
       </div>
     </div>
   );

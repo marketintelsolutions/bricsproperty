@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
       <Navbar />
       {children}
       <Footer />
-      <WhatsAppWidget phoneNumber="XXXXXXXXXX" />
+      <WhatsAppWidget align={"left"} phoneNumber="XXXXXXXXXX" />
     </>
   );
 };

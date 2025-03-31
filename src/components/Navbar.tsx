@@ -78,18 +78,18 @@ const Navbar = () => {
         <div className="flex py-1 justify-between max-w-max mx-auto">
           <Link to={"/"}>
             {" "}
-            <span className="text-[60px]">BRICS</span>
+            <span className="inline-flex w-full max-w-[250px] py-3">
+              <img src="/logo.png" alt="logo" className="w-full h-full" />
+            </span>
           </Link>
 
-          <div
-            onMouseLeave={() => setIsDropDown(false)}
-            className="flex  items-center"
-          >
+          <div className="flex  items-center">
             {navLinks.map((item, index) => {
               if (item.items) {
                 return (
                   <div
                     onMouseEnter={() => setIsDropDown(true)}
+                    onMouseLeave={() => setIsDropDown(false)}
                     className="relative"
                   >
                     <p
@@ -106,16 +106,18 @@ const Navbar = () => {
                       </span>
                     </p>
                     {isDropdown && (
-                      <div className="absolute top-[160%] left-0 w-full flex flex-col gap-2 bg-white">
-                        {item.items.map((subItem) => (
-                          <Link
-                            to={subItem.path}
-                            key={index}
-                            className={`font-light hover:bg-primaryPurple hover:text-white tracking-[2px] text-sm px-[25px] py-4 `}
-                          >
-                            {subItem.text}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full pt-[40px] left-0 w-full">
+                        <div className="  flex flex-col gap-2 bg-white">
+                          {item.items.map((subItem) => (
+                            <Link
+                              to={subItem.path}
+                              key={index}
+                              className={`font-light hover:bg-primaryPurple hover:text-white tracking-[2px] text-sm px-[25px] py-4 `}
+                            >
+                              {subItem.text}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const CinemaBg = () => {
   return (
-    <div className="flx-embed absolute top-0 left-0 w-full h-full">
+    <div className="flx-embed  w-full h-full">
       <div
         style={{
           position: "relative",
@@ -12,7 +12,7 @@ const CinemaBg = () => {
           width: "100%",
           margin: 0,
         }}
-        className="border-2 border-blue-500"
+        // className="border-2 border-blue-500"
       >
         <iframe
           style={{

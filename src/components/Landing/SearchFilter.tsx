@@ -189,7 +189,7 @@ const SearchFilter = () => {
   return (
     <div
       ref={componentRef}
-      className="w-full max-w-[1250px] mx-auto relative flex flex-col justify-center items-center translate-y-[-0px]"
+      className="w-full max-w-[1250px] mx-auto relative flex flex-col justify-center items-center translate-y-[-75px]"
     >
       <div className="flex py-3 px-8 bg-white rounded-t-[20px]">
         {Object.keys(propertiesData).map((item, index) => (

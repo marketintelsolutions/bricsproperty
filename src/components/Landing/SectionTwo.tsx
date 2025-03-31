@@ -4,10 +4,15 @@ import SearchFilter from "./SearchFilter";
 
 const SectionTwo = () => {
   return (
-    <section className="relative  h-[815px] overflow-hidden w-full">
-      <CinemaBg />
-      <div className="relative z-[2]  pb-0" style={{}}>
-        <div className="absolute w-full h-full bg-[#c4843a87]"></div>
+    <section className="relative   w-full">
+      <div
+        className="relative z-[2]  pb-0"
+        style={{
+          backgroundImage: "url(/building.jpg)",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="absolute w-full h-full bg-[#29272687]"></div>
         <div className="relative z-[2]">
           <SearchFilter />
 
