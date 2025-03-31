@@ -6,14 +6,14 @@ const SectionTwo = () => {
   return (
     <section className="relative   w-full">
       <div
-        className="relative z-[2]  pb-0"
+        className="relative   pb-0"
         style={{
           backgroundImage: "url(/building.jpg)",
           backgroundSize: "cover",
         }}
       >
         <div className="absolute w-full h-full bg-[#29272687]"></div>
-        <div className="relative z-[2]">
+        <div className="relative">
           <SearchFilter />
 
           <div>

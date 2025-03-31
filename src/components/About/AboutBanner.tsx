@@ -16,8 +16,8 @@ const AboutBanner: React.FC<{ heading: string; text: string }> = ({
         </p>
       </div>
       <div className="w-full">
-        {/* <img src="/building.jpg" alt="building" className="h-full" /> */}
-        <CinemaBg />
+        <img src="/building.jpg" alt="building" className="h-full" />
+        {/* <CinemaBg /> */}
       </div>
     </div>
   );
