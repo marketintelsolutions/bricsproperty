@@ -50,7 +50,7 @@ export const services = [
     ],
   },
   {
-    image: "buildingtwo",
+    image: "projectfinancing",
     heading: "Real Develpment Project Financing",
     text: [
       "We offer access to funding for real estate projects, specifically focusing on small scale construction endeavors on a short-term basis. Our services encompass brokering a diverse array of financial instruments to facilitate the development of both residential and commercial real estate projects of varying complexities.",
@@ -63,7 +63,7 @@ export const services = [
     ],
   },
   {
-    image: "building",
+    image: "brokerage",
     heading: "Brokerage",
     text: [
       "We provide customized bespoke services to our clientele offering advisory assistance in evaluating and overseeing their real estate assets for revenue maximization, fiscal guidance and delivering proactive management solutions to enhance their real estate investments",

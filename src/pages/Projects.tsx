@@ -58,8 +58,8 @@ const Projects = () => {
         </div>
         <div className="w-full  max-w-[40%] h-full">
           <img
-            src="/building.jpg"
-            alt="building"
+            src="/safety.jpg"
+            alt="safety"
             className="w-full h-full object-cover"
           />
         </div>
