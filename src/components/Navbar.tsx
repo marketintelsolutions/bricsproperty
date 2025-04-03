@@ -41,7 +41,7 @@ const Navbar = () => {
   const [isDropdown, setIsDropDown] = useState(false);
   return (
     <>
-      <div className="bg-primaryRed py-4 zr:hidden lg:flex">
+      <div className="bg-primaryPurple py-4 zr:hidden lg:flex">
         <div className="w-full max-w-max mx-auto flex justify-between">
           <p className="flex gap-2 text-white items-center">
             <span>

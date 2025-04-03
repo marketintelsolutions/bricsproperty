@@ -4,15 +4,29 @@ import SearchFilter from "./SearchFilter";
 
 const SectionTwo = () => {
   return (
-    <section className="relative   w-full">
+    <section className="relative  w-full">
+      {/* <div className="h-full absolute top-0 left-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          width="100%"
+          height="100%"
+        >
+          <source src="bannervid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div> */}
       <div
         className="relative   pb-0"
         style={{
-          backgroundImage: "url(/building.jpg)",
+          backgroundImage: "url(/proptech.jpg)",
           backgroundSize: "cover",
         }}
       >
-        <div className="absolute w-full h-full bg-[#29272687]"></div>
+        <div className="absolute w-full h-full bg-[#29272646]"></div>
+
         <div className="relative">
           <SearchFilter />
 
