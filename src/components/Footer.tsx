@@ -29,10 +29,24 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primaryPurple text-primaryGrey pt-40 pb-5 w-full ">
-      <div className="w-full max-w-max mx-auto">
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-14">
+    <footer className="relative border-2 text-primaryGrey pt-10 md:pt-40 pb-5 w-full ">
+      <div className="h-full absolute top-0 left-0 w-full">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          width="100%"
+          height="100%"
+        >
+          <source src={`/videos/footer.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="h-full absolute top-0 left-0 w-full bg-[#000000bc]"></div>
+      <div className="relative z-[2] w-full max-w-max mx-auto">
+        <div className="flex flex-wrap gap-20 px-6 justify-between">
+          <div className="flex flex-col gap-6 md:gap-10 lg:gap-14">
             {links.map((item, index) => (
               <Link
                 key={index}
@@ -45,7 +59,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-40">
-            <h1 className="text-6xl text-center">BRICS</h1>
+            <h1 className="text-6xl text-center zr:hidden md:flex ">BRICS</h1>
 
             <div className="flex flex-col gap-10">
               <div className="flex items-center gap-5">
@@ -70,7 +84,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-row md:flex-col gap-5">
             <span className="text-primaryGrey text-5xl">
               <FaFacebook />
             </span>
@@ -89,7 +103,7 @@ const Footer = () => {
             </button>
           </Link>
         </div>
-        <p className="text-xs mt-10">
+        <p className="text-xs mt-10 text-center md:text-left">
           © {new Date().getFullYear()} By Brics Limited
         </p>
       </div>

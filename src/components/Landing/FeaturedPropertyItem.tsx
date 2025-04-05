@@ -5,11 +5,11 @@ import { LuToilet } from "react-icons/lu";
 
 const FeaturedPropertyItem = () => {
   return (
-    <div>
+    <div className="w-full md:max-w-[290px]">
       <img
         src="/building.jpg"
         alt="building"
-        className="h-[350px] object-cover"
+        className="h-[350px]  object-cover"
       />
       <div className="bg-white">
         <div className="p-5 flex flex-col gap-3">

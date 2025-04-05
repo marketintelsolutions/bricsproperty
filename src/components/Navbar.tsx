@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaChevronDown, FaLinkedin, FaPhone } from "react-icons/fa6";
-import { IoLogoFacebook, IoMail } from "react-icons/io5";
+import { IoLogoFacebook, IoMail, IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -39,6 +39,8 @@ const navLinks = [
 
 const Navbar = () => {
   const [isDropdown, setIsDropDown] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
     <>
       <div className="bg-primaryPurple py-4 zr:hidden lg:flex">
@@ -74,16 +76,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="w-full sticky z-[99] bg-white top-0 left-0">
-        <div className="flex py-1 justify-between max-w-max mx-auto">
+      <nav className=" w-full sticky z-[99] px-6 lg:px-0 bg-white top-0 left-0">
+        <div className="flex py-1 justify-between items-center max-w-max mx-auto">
           <Link to={"/"}>
             {" "}
-            <span className="inline-flex w-full max-w-[250px] py-3">
+            <span className="inline-flex w-full max-w-[200px] md:max-w-[250px] py-3">
               <img src="/logo.png" alt="logo" className="w-full h-full" />
             </span>
           </Link>
 
-          <div className="flex  items-center">
+          <div
+            className={`absolute md:relative w-full md:w-max py-10 px-6 md:py-0 md:px-0 bg-white top-full left-0 flex-col md:flex-row  items-center gap-10 md:gap-0 ${
+              isMenu ? "flex" : "zr:hidden md:flex"
+            } `}
+          >
             {navLinks.map((item, index) => {
               if (item.items) {
                 return (
@@ -93,9 +99,9 @@ const Navbar = () => {
                     className="relative"
                   >
                     <p
-                      className={`font-light flex gap-2 items-center tracking-[2px] text-sm px-[25px]  ${
+                      className={`font-light flex gap-2 items-center tracking-[2px] text-sm md:px-[25px]  ${
                         navLinks.length !== index + 1 &&
-                        "border-r border-primaryPurple"
+                        "md:border-r border-primaryPurple"
                       }`}
                     >
                       <span>{item.text}</span>
@@ -110,6 +116,7 @@ const Navbar = () => {
                         <div className="  flex flex-col gap-2 bg-white">
                           {item.items.map((subItem) => (
                             <Link
+                              onClick={() => setIsMenu(false)}
                               to={subItem.path}
                               key={index}
                               className={`font-light hover:bg-primaryPurple hover:text-white tracking-[2px] text-sm px-[25px] py-4 `}
@@ -125,11 +132,12 @@ const Navbar = () => {
               }
               return (
                 <Link
+                  onClick={() => setIsMenu(false)}
                   to={item.path}
                   key={index}
-                  className={`font-light tracking-[2px] text-sm px-[25px]  ${
+                  className={`font-light tracking-[2px] text-sm md:px-[25px]  ${
                     navLinks.length !== index + 1 &&
-                    "border-r border-primaryPurple"
+                    "md:border-r border-primaryPurple"
                   }`}
                 >
                   {item.text}
@@ -137,6 +145,12 @@ const Navbar = () => {
               );
             })}
           </div>
+          <button
+            onClick={() => setIsMenu((prev) => !prev)}
+            className="zr:flex md:hidden"
+          >
+            <IoMenu size={35} />
+          </button>
         </div>
       </nav>
     </>

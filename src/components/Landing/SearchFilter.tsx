@@ -143,7 +143,7 @@ const SearchFilter = () => {
       if (buttonElement) {
         const rect = buttonElement.getBoundingClientRect();
         setDropdownPosition({
-          left: rect.left - 90,
+          left: rect.left,
         });
       }
     }
@@ -205,16 +205,16 @@ const SearchFilter = () => {
         ))}
       </div>
 
-      <div className="w-full grid grid-cols-5 px-10 py-8 rounded-[20px] bg-white">
-        <div className="border-r text-sm px-4">
+      <div className="w-full grid grid-cols-1 mb:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 px-5 md:px-10 py-4 md:py-8 rounded-[20px] bg-white">
+        <div className="border md:border-y-0 rounded-[4px] md:border-l-0 md:border-r text-xs md:text-sm px-4">
           <button
             ref={(el) => {
               buttonRefs.current.locations = el;
             }}
             onClick={() => handleGroupChange("locations")}
-            className={`flex flex-col items-start px-6 py-3 border-primaryGrey gap-3 ${
+            className={`flex flex-col items-start w-full px-4 md:px-6 py-2 md:py-3 border-primaryGrey gap-3 ${
               activeGroup === "locations" && isDropdownVisible
-                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-full"
+                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-[4px] md:rounded-full"
                 : ""
             }`}
           >
@@ -223,15 +223,15 @@ const SearchFilter = () => {
           </button>
         </div>
 
-        <div className="border-r text-sm px-4">
+        <div className="border md:border-y-0 rounded-[4px] md:border-l-0 md:border-r text-xs md:text-sm px-4">
           <button
             ref={(el) => {
               buttonRefs.current.propertyType = el;
             }}
             onClick={() => handleGroupChange("propertyType")}
-            className={`flex flex-col items-start px-6 py-3 border-primaryGrey gap-3 ${
+            className={`flex flex-col items-start w-full px-4 md:px-6 py-2 md:py-3 border-primaryGrey gap-3 ${
               activeGroup === "propertyType" && isDropdownVisible
-                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-full"
+                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-[4px] md:rounded-full"
                 : ""
             }`}
           >
@@ -240,32 +240,32 @@ const SearchFilter = () => {
           </button>
         </div>
 
-        <div className="border-r text-sm px-4">
+        <div className="border md:border-y-0 rounded-[4px] md:border-l-0 md:border-r text-xs md:text-sm px-4">
           <button
             ref={(el) => {
               buttonRefs.current.bedroom = el;
             }}
             onClick={() => handleGroupChange("bedroom")}
-            className={`flex flex-col items-start px-6 py-3 border-primaryGrey gap-3 ${
+            className={`flex flex-col items-start w-full px-4 md:px-6 py-2 md:py-3 border-primaryGrey gap-3 ${
               activeGroup === "bedroom" && isDropdownVisible
-                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-full"
+                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-[4px] md:rounded-full"
                 : ""
             }`}
           >
             <span>Bedroom</span>
-            <span className="text-gray-400">Number of Bedroom</span>
+            <span className="text-gray-400">No. of Bedroom</span>
           </button>
         </div>
 
-        <div className="border-r text-sm px-4">
+        <div className="border md:border-y-0 rounded-[4px] md:border-l-0 md:border-r text-xs md:text-sm px-4">
           <button
             ref={(el) => {
               buttonRefs.current.price = el;
             }}
             onClick={() => handleGroupChange("price")}
-            className={`flex flex-col items-start px-6 py-3 border-primaryGrey gap-3 ${
+            className={`flex flex-col items-start w-full px-4 md:px-6 py-2 md:py-3 border-primaryGrey gap-3 ${
               activeGroup === "price" && isDropdownVisible
-                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-full"
+                ? "shadow-[0px_2px_25px_15px_rgba(0,0,0,0.1)] rounded-[4px] md:rounded-full"
                 : ""
             }`}
           >
@@ -287,11 +287,11 @@ const SearchFilter = () => {
       {isDropdownVisible && activeGroup && (
         <div
           ref={dropdownRef}
-          className="absolute top-[110%] bg-white px-10 min-w-[400px] py-8 flex flex-col gap-5 rounded-[20px] shadow-lg z-10"
+          className="absolute top-[102%] md:top-[110%] bg-white px-5 md:px-10 md:min-w-[400px] py-4 md:py-8 flex flex-col gap-5 rounded-[6px] md:rounded-[20px] shadow-lg z-10"
           style={dropdownPosition}
         >
           {activeGroup === "price" ? (
-            <div className="flex gap-20">
+            <div className="flex gap-10 md:gap-14 lg:gap-20 text-sm md:text-base ">
               <div className="flex flex-col gap-10">
                 <h4>Min Price</h4>
                 <div className="flex flex-col gap-5">
@@ -315,8 +315,11 @@ const SearchFilter = () => {
             </div>
           ) : (
             activeGroupDetails?.items?.map((item, index) => (
-              <p key={index} className="flex gap-3 items-center">
-                <span className="inline-flex p-3 text-xl bg-primaryGrey rounded-[4px]">
+              <p
+                key={index}
+                className="flex gap-3 text-sm md:text-base items-center"
+              >
+                <span className="inline-flex p-3 text-base md:text-xl bg-primaryGrey rounded-[4px]">
                   {activeGroupDetails?.icon}
                 </span>
                 <span>{item}</span>

@@ -5,19 +5,6 @@ import SearchFilter from "./SearchFilter";
 const SectionTwo = () => {
   return (
     <section className="relative  w-full">
-      {/* <div className="h-full absolute top-0 left-0">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          width="100%"
-          height="100%"
-        >
-          <source src="bannervid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
       <div
         className="relative   pb-0"
         style={{
@@ -32,15 +19,19 @@ const SectionTwo = () => {
 
           <div>
             <SlideIn duration={1200} distance={70} direction="left" delay={150}>
-              <h1 className="text-center uppercase mt-10 font-semibold text-4xl text-white">
+              <h1 className="text-center uppercase mt-10 font-semibold text-2xl md:text-3xl lg:text-4xl text-white">
                 Property Search In Nigeria Made Easy
               </h1>
             </SlideIn>
 
-            <div className="w-full mt-20 max-w-max mx-auto flex gap-40">
-              <div className="py-10 px-14 w-full max-w-[45%] h-fit bg-primaryPurple flex flex-col gap-10 text-white">
-                <div className="flex items-center gap-10">
-                  <img src="/asset.png" alt="setting" className="w-[80px]" />
+            <div className="w-full mt-20 max-w-max mx-auto flex flex-wrap gap-40">
+              <div className="py-10 px-14 w-full md:max-w-[45%] h-fit bg-primaryPurple flex flex-col gap-10 text-white">
+                <div className="flex items-center gap-6 md:gap-10">
+                  <img
+                    src="/asset.png"
+                    alt="setting"
+                    className="w-[50px] md:w-[80px]"
+                  />
                   <SlideIn
                     duration={1200}
                     distance={70}
@@ -48,18 +39,22 @@ const SectionTwo = () => {
                     delay={250}
                   >
                     <div className="flex flex-col gap-2">
-                      <p className="text-xl">
+                      <p className="text-base md:text-xl">
                         Ensuring your properties are assets, not headaches
                       </p>
-                      <p className="text-sm">
+                      <p className="text-xs md:text-sm">
                         To ensure your properties are valuable assets and not
                         sources of stress.
                       </p>
                     </div>
                   </SlideIn>
                 </div>
-                <div className="flex items-center gap-10">
-                  <img src="/unlock.png" alt="setting" className="w-[80px]" />
+                <div className="flex items-center gap-6 md:gap-10">
+                  <img
+                    src="/unlock.png"
+                    alt="setting"
+                    className="w-[50px] md:w-[80px]"
+                  />
                   <SlideIn
                     duration={1200}
                     distance={70}
@@ -67,17 +62,21 @@ const SectionTwo = () => {
                     delay={350}
                   >
                     <div className="flex flex-col gap-2">
-                      <p className="text-xl">
+                      <p className="text-base md:text-xl">
                         Unlock the Value of Your Property
                       </p>
-                      <p className="text-sm">
+                      <p className="text-xs md:text-sm">
                         Converting underused areas like attics and basements.
                       </p>
                     </div>
                   </SlideIn>
                 </div>
-                <div className="flex items-center gap-10">
-                  <img src="/home.png" alt="setting" className="w-[80px]" />
+                <div className="flex items-center gap-6 md:gap-10">
+                  <img
+                    src="/home.png"
+                    alt="setting"
+                    className="w-[50px] md:w-[80px]"
+                  />
                   <SlideIn
                     duration={1200}
                     distance={70}
@@ -85,8 +84,10 @@ const SectionTwo = () => {
                     delay={450}
                   >
                     <div className="flex flex-col gap-2">
-                      <p className="text-xl">Where Dreams Become Homes</p>
-                      <p className="text-sm">
+                      <p className="text-base md:text-xl">
+                        Where Dreams Become Homes
+                      </p>
+                      <p className="text-xs md:text-sm">
                         This is where dreams come to life. You can discover a
                         dreamy real estate opportunity.
                       </p>
@@ -94,7 +95,7 @@ const SectionTwo = () => {
                   </SlideIn>
                 </div>
               </div>
-              <div className="w-full max-w-[50%]">
+              <div className="w-full md:max-w-[50%]">
                 <img src="/man.png" alt="man" className="w-full" />
               </div>
             </div>

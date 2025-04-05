@@ -23,7 +23,7 @@ const Contact = () => {
       </h1>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center text-5xl text-primaryPurple font-semibold mt-28 mb-10">
+        <h1 className="text-center text-3xl md:text-4xl lg:text-5xl text-primaryPurple font-semibold mt-28 mb-10">
           Get In{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             Touch
@@ -31,60 +31,60 @@ const Contact = () => {
         </h1>
       </SlideIn>
       <SlideIn duration={1200} distance={70} direction="bottom" delay={250}>
-        <p className="text-lg text-center max-w-[600px] mx-auto">
+        <p className="text-lg text-center px-6 lg:px-0 max-w-[600px] mx-auto">
           Do you want to make an inquiry, a complaint or do you just want to
           know more about us? Then you’re on the right page. Send us a message
           right here or contact us on any of the channels listed below
         </p>
       </SlideIn>
 
-      <div className="py-20 w-full max-w-[1100px] mx-auto flex flex-row-reverse flex-wrap gap-4 justify-between">
-        <SlideIn duration={1200} distance={70} direction="right" delay={150}>
-          <div className="flex flex-col gap-4 shadow-[0px_0px_15px_5px_rgba(0,0,0,0.1)] p-10 h-fit rounded-[6px]">
-            <h1 className="text-[40px]">Contact Channels</h1>
-            <p className="text-[20px] font-light">
-              We would love to hear from you
-            </p>
-            <p className="text-[17px] font-extralight mt-12 flex gap-4">
-              <span className="text-primaryRed">
-                <IoLocationOutline size={50} />
-              </span>
-              <span>
-                PLot 22, Akiogun New Market Road,
-                <br /> Oniru Victoria Island, Lagos
-              </span>
-            </p>
-            <p className="text-[17px] font-extralight mt-8 flex gap-4 items-center">
-              <span className="text-primaryRed">
-                <IoMailOutline size={50} />
-              </span>
-              <span className="text-black">
-                hello@truebondglobalinvestments.com
-              </span>
-            </p>
-            <p className="text-[17px] font-extralight mt-8 flex gap-4">
-              <span className="text-primaryRed">
-                <LuPhone size={50} />
-              </span>
-              <span className="text-black">
-                {" "}
-                09062447811, 07074521822, 09062979783,
-                <br /> 09131038886, 09062979787
-              </span>
-            </p>
-            <div className="flex mt-8 gap-5">
-              <span className="text-primaryRed text-5xl">
-                <FaFacebook />
-              </span>
-              <span className="text-primaryRed text-5xl">
-                <FaInstagram />
-              </span>
-              <span className="text-primaryRed text-5xl">
-                <FaLinkedin />
-              </span>
-            </div>
+      <div className="py-20 w-full max-w-[1100px] mx-auto px-6 lg:px-0 flex flex-row-reverse flex-wrap gap-4  justify-between">
+        {/* <SlideIn duration={1200} distance={70} direction="right" delay={150}> */}
+        <div className="w-full md:w-fit flex flex-col gap-4 shadow-[0px_0px_15px_5px_rgba(0,0,0,0.1)] p-10 h-fit rounded-[6px]">
+          <h1 className="text-[40px]">Contact Channels</h1>
+          <p className="text-[20px] font-light">
+            We would love to hear from you
+          </p>
+          <p className="text-[17px] font-extralight mt-12 flex gap-4">
+            <span className="text-primaryRed">
+              <IoLocationOutline size={50} />
+            </span>
+            <span>
+              PLot 22, Akiogun New Market Road,
+              <br /> Oniru Victoria Island, Lagos
+            </span>
+          </p>
+          <p className="text-[17px] font-extralight mt-8 flex gap-4 items-center">
+            <span className="text-primaryRed">
+              <IoMailOutline size={50} />
+            </span>
+            <span className="text-black">
+              hello@truebondglobalinvestments.com
+            </span>
+          </p>
+          <p className="text-[17px] font-extralight mt-8 flex gap-4">
+            <span className="text-primaryRed">
+              <LuPhone size={50} />
+            </span>
+            <span className="text-black">
+              {" "}
+              09062447811, 07074521822, 09062979783,
+              <br /> 09131038886, 09062979787
+            </span>
+          </p>
+          <div className="flex mt-8 gap-5">
+            <span className="text-primaryRed text-5xl">
+              <FaFacebook />
+            </span>
+            <span className="text-primaryRed text-5xl">
+              <FaInstagram />
+            </span>
+            <span className="text-primaryRed text-5xl">
+              <FaLinkedin />
+            </span>
           </div>
-        </SlideIn>
+        </div>
+        {/* </SlideIn> */}
 
         <form className="w-full lg:max-w-[50%] flex flex-col gap-10 p-10 rounded-[6px] bg-white shadow-[0px_0px_15px_5px_rgba(0,0,0,0.1)]">
           <h2>Send us a mail</h2>

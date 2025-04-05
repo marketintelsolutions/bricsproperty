@@ -56,9 +56,9 @@ const Team = () => {
 
   return (
     <section className="w-full pb-40">
-      <AboutBanner heading={"PROPERTY SEARCH"} text="" />
+      <AboutBanner heading={"PROPERTY SEARCH"} text="" video="house" />
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           OUR{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             BOARD
@@ -66,7 +66,7 @@ const Team = () => {
         </h1>
       </SlideIn>
 
-      <div className="grid  grid-cols-2 w-full max-w-[50%] mx-auto mt-20  gap-20 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full lg:max-w-[50%] px-6 md:px-0 mx-auto mt-20  gap-20 justify-center">
         {board.map((item, index) => (
           <SlideIn
             duration={1200}
@@ -104,7 +104,7 @@ const Team = () => {
       </div>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           OUR{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             TEAM
@@ -112,7 +112,7 @@ const Team = () => {
         </h1>
       </SlideIn>
 
-      <div className="grid  grid-cols-4 w-full max-w-max mx-auto mt-20  gap-20 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full max-w-max mx-auto px-6 lg:px-0 mt-20  gap-20 justify-center">
         {team.map((item, index) => (
           <SlideIn
             duration={1200}

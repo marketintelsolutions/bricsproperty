@@ -65,9 +65,9 @@ const whychooseus = [
 
 const AboutDetails = () => {
   return (
-    <section className="w-full max-w-max mx-auto py-40">
+    <section className="w-full max-w-max mx-auto py-20 md:py-40">
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           ABOUT{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             US
@@ -75,8 +75,8 @@ const AboutDetails = () => {
         </h1>
       </SlideIn>
 
-      <div className="w-full flex items-center justify-between mt-20 gap-20">
-        <div className="w-full max-w-[45%] text-justify flex flex-col gap-10">
+      <div className="w-full flex flex-wrap items-center justify-between px-6 mt-10 md:mt-20 gap-20">
+        <div className="w-full md:max-w-[45%] text-justify flex flex-col gap-10">
           <SlideIn duration={1200} distance={70} direction="left" delay={150}>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
@@ -103,7 +103,7 @@ const AboutDetails = () => {
           </SlideIn>
         </div>
 
-        <div className="w-full h-[350px] max-w-[45%]">
+        <div className="w-full h-[350px] md:max-w-[45%]">
           <img
             src="/building.jpg"
             alt="building"
@@ -113,7 +113,7 @@ const AboutDetails = () => {
       </div>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-20 md:mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           OUR{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             MISSION
@@ -122,14 +122,14 @@ const AboutDetails = () => {
       </SlideIn>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={250}>
-        <p className="text-center max-w-[600px] mt-10 text-[#373737] font-light text-lg mx-auto">
+        <p className="text-center max-w-[600px] px-6 md:px-0 mt-10 text-[#373737] font-light text-base md:text-lg mx-auto">
           To help our customers generate maximum returns through efficient
           development, targeted marketing, and effective management of
           infrastructure{" "}
         </p>
       </SlideIn>
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-20 md:mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           OUR{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             VISION
@@ -138,14 +138,14 @@ const AboutDetails = () => {
       </SlideIn>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={250}>
-        <p className="text-center max-w-[600px] mt-10 text-[#373737] font-light text-lg mx-auto">
+        <p className="text-center max-w-[600px] px-6 md:px-0 mt-10 text-[#373737] font-light text-base md:text-lg mx-auto">
           To be the best-in-class and preferred ifrastructure <br />{" "}
           organisation in Africa
         </p>
       </SlideIn>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-20 md:mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           OUR{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             VALUES
@@ -153,7 +153,7 @@ const AboutDetails = () => {
         </h1>
       </SlideIn>
 
-      <div className="grid grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-0 gap-8 mt-10">
         {values.map((item, index) => (
           <SlideIn
             duration={1200}
@@ -176,7 +176,7 @@ const AboutDetails = () => {
       </div>
 
       <SlideIn duration={1200} distance={70} direction="bottom" delay={150}>
-        <h1 className="text-center mt-40 text-[50px] font-semibold text-primaryPurple">
+        <h1 className="text-center mt-40 text-[35px] md:text-[40px] lg:text-[50px] font-semibold text-primaryPurple">
           WHY CHOOSE{" "}
           <span className="text-primaryRed border-b-4 border-primaryRed pb-1">
             US
@@ -184,7 +184,7 @@ const AboutDetails = () => {
         </h1>
       </SlideIn>
 
-      <div className="mt-20 gap-14 mx-auto grid grid-cols-3 w-full max-w-max">
+      <div className="mt-20 gap-14 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-0 w-full max-w-max">
         {whychooseus.map((item, index) => (
           <SlideIn
             duration={1200}
@@ -194,7 +194,7 @@ const AboutDetails = () => {
           >
             <div
               key={index}
-              className="bg-primaryRed text-white flex h-full flex-col items-center py-10 px-10"
+              className="bg-primaryRed text-white flex h-full flex-col items-center py-8 md:py-10 px-8 md:px-10"
             >
               <img
                 src={`/${item.icon}.png`}
